@@ -2,6 +2,7 @@ import pyautogui
 import random
 import time
 
+time_between_move=800
 # Function to simulate pressing the space key
 def press_space():
     pyautogui.keyDown('a')
@@ -36,7 +37,7 @@ def main():
             move_mouse_randomly()
             time.sleep(5)  # Wait for a second
             click_center()
-            time.sleep(10)  # Wait for 60 seconds before repeating
+            time.sleep(time_between_move)  # Wait for 60 seconds before repeating
             print (".")
     except KeyboardInterrupt:
         print("\nProgram stopped by user.")
